@@ -9,8 +9,8 @@ import {useDispatch} from "react-redux";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import { places } from '../js/Spotlight';
-import styles from "../css/inthespot.module.css";
+import { places } from '../js/Findbestplaces';
+import styles from "../css/findbestplaces.module.css";
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -35,7 +35,7 @@ function SamplePrevArrow(props) {
 }
 
 
-const Inthespot = () => {
+const Findbestplaces = () => {
   const settings = {
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
@@ -76,9 +76,9 @@ const Inthespot = () => {
   return (
     <div>
           <br/>
-          <Heading fontWeight={600} 
-          width="50%">
-          In the Spotlight: Partnerships
+          <Heading fontWeight={600} textAlign="left" marginLeft="80px"
+          width="90%">
+          Find Best Places to Visit in India in July & August
           </Heading>
          <div class={styles.App}>
 
@@ -98,9 +98,8 @@ const Inthespot = () => {
           </Slider>
          
          </div>
-         <Image width="90%" margin="auto" src={'https://cdn1.tripoto.com/media/transfer/img/2224454/Image/1656479622_header_web2.gif'}/>
-    </div>
+      </div>
   )
 }
 
-export default Inthespot
+export default Findbestplaces;
