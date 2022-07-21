@@ -8,6 +8,10 @@ import Findbestplaces from '../components/Findbestplaces';
 import Plan from '../components/Plan';
 import Check from '../components/Check';
 import Travel from '../components/Travel';
+import Creator from '../components/Creator';
+import Guides from '../components/Guides';
+import Watch from '../components/Watch';
+import Footer from '../components/Footer';
 const HomePage = () => {
   return (
     <div>
@@ -19,6 +23,10 @@ const HomePage = () => {
       <Plan/>
       <Check/>
       <Travel/>
+      <Creator/>
+      <Guides/>
+      <Watch/>
+      <Footer/>
       </div>
   )
 }
