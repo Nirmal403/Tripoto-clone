@@ -33,6 +33,11 @@ const Navbar = () => {
         // positon="fixed"
         // bgImage="url('https://cdn1.tripoto.com/assets/2.9/img/home_banner_road.jpg')"
         // border= "1px solid red"
+        // right="0"
+        // // left="0"
+        // position="fixed"
+        // overflow-y="hidden"
+        // overflow-x="hidden"
       >
         <Flex>
           <Link href="/">

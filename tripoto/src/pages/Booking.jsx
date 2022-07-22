@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from "react";
+import Footer from "../components/Footer";
 import { useParams } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import { places } from "../js/Travel";
+import Para from "../components/Para";
+import Travel from "../components/Travel";
+import { useNavigate } from "react-router-dom";
 import {
   Flex,
   Box,
@@ -109,11 +113,11 @@ const Booking = (amount) => {
             <Slider {...settings}>
               {places.map((item) => (
                 <div className={styles.card}>
-                  <div className={styles.cardtop}>
+                   <div className={styles.cardtop}>
                     <Image src={item.sliderimg} />
                   </div>
-                </div>
-              ))}
+                </div> 
+               ))} 
             </Slider>
           </Box>
           <Box
@@ -122,6 +126,11 @@ const Booking = (amount) => {
             marginLeft="50px"
             borderRadius="8px"
             boxShadow="0 0 3px rgb(0 0 0 / 25%)"
+            // right="70.5"
+            // // left="0"
+            // position="fixed"
+            // overflow-y="scroll"
+            // overflow-x="hidden"
           >
             <Form amount={data.price1} />
             {/* <Form>
@@ -327,8 +336,13 @@ const Booking = (amount) => {
           <Heading as="h4" size="lg" textAlign="left">
             Overview
           </Heading>
+          <Para/>
         </Box>
+        
       </Box>
+      <Travel/>
+      <br/>
+      <Footer/>
     </div>
   );
 };
