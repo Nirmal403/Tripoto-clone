@@ -16,6 +16,11 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { places } from "../js/Travel";
 import styles from "../css/travel.module.css";
+import { Link } from "react-router-dom";
+import Booking from "../pages/Booking";
+import { useNavigate } from "react-router-dom";
+
+
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -77,6 +82,7 @@ const Travel = () => {
     ],
   };
   // const dispatch = useDispatch();
+  const navigate = useNavigate(); 
   return (
     <div>
       <br />
@@ -122,12 +128,15 @@ const Travel = () => {
                 <Text fontSize={"18px"} color="black" fontWeight={600}>{item.price}</Text>
                 <Spacer/>
                 <Button 
+                onClick={() => {
+                  navigate(`/booking/${item.id}`);
+                }}
                 marginTop="10px"
                 marginBottom="10px"
                 border="1px solid teal"
                 color="teal"
                 bg={"#fff"}
-                        >Book Now</Button>
+                        >{item.book}</Button>
                 </Flex>
                 <Divider orientation='horizontal' />
                 <Flex marginTop="10px">

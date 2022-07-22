@@ -1,14 +1,19 @@
 export const places = [
   {
     id: 1,
-    imgUrl:
-      "https://cdn1.tripoto.com/media/filter/tst/img/2163002/Image/1642496887_image_cover.jpg",
+    imgUrl:"https://cdn1.tripoto.com/media/filter/tst/img/2163002/Image/1642496887_image_cover.jpg",
+    sliderimg:[
+              //  "https://stream.mux.com/tGupH004wNm02J5UqgNgrG6VhqcGQJmhtb/medium.mp4",
+               "https://cdn1.tripoto.com/media/filter/nxxl/img/2176903/Image/1653546268_nw_lf1.jpg",
+              ],
     package: "PACKAGE",
     name: "Hike to a Natural Pool and Go Bushcrafting at this Luxury Camp | Moksham Himalayan Campsite, Pangot",
     location: "Nainital",
     days: "3D-2N",
     price: "₹7,199 /person",
+    price1: 7199,
     info: "Tripoto's Mindful Retreats",
+    book: "Book Now",
   },
   {
     id: 2,
@@ -17,9 +22,12 @@ export const places = [
     name: "Explore One of Asia's Spookiest Spots While Unwinding Amidst Nature | Seegreen Lodges, Mussoorie",
     package: "PACKAGE",
     location: "Mussoorie",
+    book: "Book Now",
     price: "₹7,500 /person",
     days: "3D-2N",
+    price1: 7500,
     info: "Tripoto's Mindful Retreats",
+    book: "Book Now",
   },
   {
     id: 3,
@@ -29,8 +37,10 @@ export const places = [
     package: "PACKAGE",
     location: "Mukteshwar",
     price: "₹7,150 /person",
+    price1: 7150,
     days: "3D-2N",
     info: "Tripoto's Mindful Retreats",
+    book: "Book Now",
   },
   {
     id: 4,
@@ -41,7 +51,9 @@ export const places = [
     location: "Bir",
     days: "3D-2N",
     price: "₹8,500 /person",
+    price1: 8500,
     info: "Tripoto's Mindful Retreats",
+    book: "Book Now",
   },
   {
     id: 5,
@@ -52,8 +64,10 @@ export const places = [
     package: "PACKAGE",
     location: "Nainital",
     price: "₹5,199 /person",
+    price1: 5199,
     days: "4D-2N",
     info: "Tripoto's Mindful Retreats",
+    book: "Book Now",
   },
   {
     id: 6,
@@ -64,7 +78,9 @@ export const places = [
     location: "Manali",
     days: "3D-2N",
     price: "₹4,799 /person",
+    price1: 4799,
     info: "Tripoto's Mindful Retreats",
+    book: "Book Now",
   },
   {
     id: 7,
@@ -75,7 +91,9 @@ export const places = [
     info: "Tripoto's Mindful Retreats",
     location: "Ramnagar",
     price: "₹13,199 /person",
+    price1: 13199,
     days: "3D-2N",
+    book: "Book Now",
   },
   {
     id: 8,
@@ -87,6 +105,8 @@ export const places = [
     days: "3D-2N",
     info: "Tripoto's Mindful Retreats",
     price: "₹9,199 /person",
+    price1: 9199,
+    book: "Book Now",
   },
   {
     id: 9,
@@ -98,5 +118,7 @@ export const places = [
     days: "3D-2N",
     info: "Tripoto's Mindful Retreats",
     price: "₹10,000 /person",
+    price1: 10000,
+    book: "Book Now",
   },
 ];

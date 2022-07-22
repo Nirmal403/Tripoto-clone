@@ -4,6 +4,7 @@ import HomePage from './pages/HomePage';
 import Forum from './pages/Forum';
 import Signin from './pages/Signin';
 import Packages from './pages/Packages';
+import Booking from './pages/Booking';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/forum" element={<Forum/>}   />
         {/* <Route path="/signin" element={<Signin/>}   /> */}
         <Route path="/packages" element={<Packages/>}   />
+        <Route path="/booking/:id" element={<Booking/>} />
       </Routes>
     </div>
   );
