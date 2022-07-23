@@ -12,6 +12,8 @@ import Creator from '../components/Creator';
 import Guides from '../components/Guides';
 import Watch from '../components/Watch';
 import Footer from '../components/Footer';
+import Attend from '../components/Attend';
+import Budget from '../components/Budget';
 const HomePage = () => {
   return (
     <div>
@@ -26,6 +28,8 @@ const HomePage = () => {
       <Creator/>
       <Guides/>
       <Watch/>
+      <Budget/>
+      <Attend/>
       <Footer/>
       </div>
   )
