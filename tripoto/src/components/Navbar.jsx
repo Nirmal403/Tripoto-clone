@@ -12,6 +12,7 @@ import Inspirations from "./Inspirations";
 import Searchbar from "./Searchbar";
 import { UseScrollPosition } from "../js/UseScrollPosition";
 
+
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
@@ -112,6 +113,7 @@ const Navbar = () => {
             <Signin />
           </Flex>
         </Flex>
+       
       </Box>
   );
 };

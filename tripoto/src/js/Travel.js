@@ -148,19 +148,5 @@ export const places = [
     price1: 10000,
     book: "Book Now",
   },
-  {
-    sliderimg: [
-      "https://cdn1.tripoto.com/media/filter/nxxl/img/2176903/Image/1654158116_img_20211007_180014_1.jpg",
-    ],
-  },
-  {
-    sliderimg: [
-      "https://cdn1.tripoto.com/media/filter/nxxl/img/2176903/Image/1654158136_whatsapp_image_2022_05_08_at_9_32_58_pm_1.jpeg",
-    ],
-  },
-  {
-    sliderimg: [
-      "https://cdn1.tripoto.com/media/filter/nxxl/img/2176903/Image/1654158150_whatsapp_image_2022_03_27_at_8_56_32_pm_10_1.jpeg",
-    ],
-  },
+  
 ];

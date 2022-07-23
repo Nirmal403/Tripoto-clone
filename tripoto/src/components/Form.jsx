@@ -1,4 +1,16 @@
-import React ,{useState} from "react";
+import React, { useState } from "react";
+import { Link } from "@chakra-ui/react";
+import {
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,
+  useDisclosure,
+  
+} from '@chakra-ui/react'
 import {
   FormControl,
   FormLabel,
@@ -7,6 +19,7 @@ import {
   Heading,
 } from "@chakra-ui/react";
 import {
+  Button,
   Flex,
   Box,
   Image,
@@ -19,33 +32,53 @@ import {
   NumberInput,
   NumberInputStepper,
 } from "@chakra-ui/react";
-import { Select, Radio, RadioGroup, Stack,Checkbox, CheckboxGroup } from "@chakra-ui/react";
+import {
+  Select,
+  Radio,
+  RadioGroup,
+  Stack,
+  Checkbox,
+  CheckboxGroup,
+} from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
 
 const Form = (props) => {
+  const navigate = useNavigate();
 
-    const [num, setnum] = useState(0);
+  const { isOpen, onOpen, onClose } = useDisclosure()
 
-    const handleChange = (num) => {
-      setnum(num);
 
-      console.log('value is:', num);
-    };
 
-    const amount = props.amount;
-    // const total = num * amount;
+  const [num, setnum] = useState(0);
+
+  const handleChange = (num) => {
+    setnum(num);
+
+    console.log("value is:", num);
+  };
+
+  const amount = props.amount;
+  // const total = num * amount;
   return (
     <div>
-      <FormControl width="80%" margin="auto" marginTop="20px">
+      <FormControl width="80%" margin="auto" marginTop="20px" >
         <FormLabel>Enter Your Details and Proceed To Book</FormLabel>
-        <Input type="email" placeholder="Email" marginTop="10px"/>
-        <Input placeholder="Full Name" marginTop="10px"/>
-        <Input placeholder="Contact Number" marginTop="10px"/>
-        <Input placeholder="Depature City" marginTop="10px"/>
-        <NumberInput max={10} min={1} value={num}  onChange={handleChange} type="number"
-        id="num"
-        name="num" marginTop="10px">
-          <NumberInputField placeholder="Number of People"  />
-          <NumberInputStepper >
+        <Input type="email" placeholder="Email" marginTop="10px" />
+        <Input placeholder="Full Name" marginTop="10px" />
+        <Input placeholder="Contact Number" marginTop="10px" />
+        <Input placeholder="Depature City" marginTop="10px" />
+        <NumberInput
+          max={10}
+          min={1}
+          value={num}
+          onChange={handleChange}
+          type="number"
+          id="num"
+          name="num"
+          marginTop="10px"
+        >
+          <NumberInputField placeholder="Number of People" />
+          <NumberInputStepper>
             <NumberIncrementStepper />
             <NumberDecrementStepper />
           </NumberInputStepper>
@@ -61,17 +94,65 @@ const Form = (props) => {
           </Radio>
         </Stack>
         <Flex marginTop="10px">
-        <Checkbox  defaultChecked>Send me updates for booking</Checkbox>
-        <Image width="20px" marginLeft="4px" height="20px" src={"https://cdn1.tripoto.com/assets/2.9/img/logo/whatsapp-logo.png"} />
+          <Checkbox defaultChecked>Send me updates for booking</Checkbox>
+          <Image
+            width="20px"
+            marginLeft="4px"
+            height="20px"
+            src={
+              "https://cdn1.tripoto.com/assets/2.9/img/logo/whatsapp-logo.png"
+            }
+          />
         </Flex>
         <Flex marginTop="10px">
-        <Heading as="h4"  size='md'>Amount:</Heading>
-        <Spacer/>
-        <Heading as ="h4" size='md'>₹{num*amount}</Heading>
-       
+          <Heading as="h4" size="md">
+            Amount:
+          </Heading>
+          <Spacer />
+          <Heading as="h4" size="md">
+            ₹{num * amount}
+          </Heading>
         </Flex>
-      </FormControl>
+        <>
+      <Button onClick={onOpen}    _hover={{ bg: "#3390dd" }}
+          _active={{
+            bg: "#3390dd",
+            transform: "scale(0.98)",
+            borderColor: "#3390dd",
+          }}
+          marginTop="8px"
+          marginBottom="15px"
+          width="100%"
+          bgColor={"#3390dd"}
+          color="white"
+          fontWeight="bold">Next -{">"}{" "}</Button>
 
+      <Modal isOpen={isOpen} onClose={onClose}>
+        <ModalOverlay />
+        <ModalContent>
+          <ModalHeader >Your Booking is done</ModalHeader>
+          <ModalCloseButton />
+          <ModalBody>
+              <Heading textAlign="center">Enjoy Your Trip!</Heading>
+          </ModalBody>
+
+          <ModalFooter>
+            <Button colorScheme='blue' mr={3} margin="auto" onClick={() => {
+                     
+                     navigate('/');
+                    //  window.location.reload(); 
+                   //  handlechange();
+                    
+                    //  return <Link href="/"></Link>
+                   }}
+                   >
+              Close
+            </Button>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
+    </>
+      </FormControl>
     </div>
   );
 };

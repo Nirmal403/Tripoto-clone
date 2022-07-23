@@ -1,11 +1,11 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
-
+import Footer from '../components/Footer';
 const Forum = () => {
   return (
     <div>
         <Navbar/>
-        Forum Page
+        <Footer/>
     </div>
   )
 }

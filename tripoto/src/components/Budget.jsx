@@ -14,8 +14,8 @@ import { Divider } from "@chakra-ui/react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import { places } from "../js/Travel";
-import styles from "../css/travel.module.css";
+import { places } from "../js/Budget";
+import styles from "../css/budget.module.css";
 import { Link } from "react-router-dom";
 // import Booking from "../pages/Booking";
 import { useNavigate } from "react-router-dom";
@@ -42,7 +42,7 @@ function SamplePrevArrow(props) {
   );
 }
 
-const Travel = () => {
+const Budget = () => {
 
 
 
@@ -94,7 +94,7 @@ const Travel = () => {
     <div>
       <br />
       <Heading fontWeight={600} textAlign="left" marginLeft="80px" width="90%">
-        Travel and Learn with Tripoto's Mindful Retreats
+      Book Budget Tour Packages Curated For You
       </Heading>
       <div class={styles.App}>
         <Slider {...settings}>
@@ -183,4 +183,4 @@ const Travel = () => {
   );
 };
 
-export default Travel;
+export default Budget;

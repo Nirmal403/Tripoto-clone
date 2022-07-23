@@ -14,35 +14,14 @@ import { Divider } from "@chakra-ui/react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import { places } from "../js/Travel";
-import styles from "../css/travel.module.css";
+import { places } from "../js/Attend";
+import styles from "../css/attend.module.css";
 import { Link } from "react-router-dom";
 // import Booking from "../pages/Booking";
 import { useNavigate } from "react-router-dom";
 
-function SampleNextArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{ ...style, display: "block", background: "blue" }}
-      onClick={onClick}
-    />
-  );
-}
 
-function SamplePrevArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{ ...style, display: "block", background: "blue" }}
-      onClick={onClick}
-    />
-  );
-}
-
-const Travel = () => {
+const Attend = () => {
 
 
 
@@ -53,9 +32,7 @@ const Travel = () => {
 
 
   const settings = {
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
-    // dots: true,
+ 
     infinite: false,
     speed: 500,
     slidesToShow: 3,
@@ -94,7 +71,7 @@ const Travel = () => {
     <div>
       <br />
       <Heading fontWeight={600} textAlign="left" marginLeft="80px" width="90%">
-        Travel and Learn with Tripoto's Mindful Retreats
+      Attend Online Experiences: Tripoto's Exclusive Online Workshops
       </Heading>
       <div class={styles.App}>
         <Slider {...settings}>
@@ -106,33 +83,7 @@ const Travel = () => {
                 <h1>{item.name}</h1>
               </div>
               <div className={styles.cardbottom}>
-                <Flex>
-                  <Image
-                    src={
-                      "data:image/svg+xml,%3csvg width='11px' height='15px' viewBox='0 0 11 15' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3e %3cg transform='translate(-36.000000%2c -35.000000)' fill='%23359391'%3e %3cpath d='M46.1538462%2c43.5714286 L41.5%2c50 L36.8461538%2c43.5714286 L36.8670256%2c43.5714286 C36.3173077%2c42.7142857 36%2c41.6851429 36%2c40.5714286 C36%2c37.4854286 38.4535641%2c35 41.5%2c35 C44.5464359%2c35 47%2c37.4854286 47%2c40.5714286 C47%2c41.6851429 46.6826923%2c42.7142857 46.1329744%2c43.5714286 L46.1538462%2c43.5714286 Z M41.4294872%2c39 C40.6150641%2c39 39.9487179%2c39.675 39.9487179%2c40.5 C39.9487179%2c41.325 40.6150641%2c42 41.4294872%2c42 C42.2439103%2c42 42.9102564%2c41.325 42.9102564%2c40.5 C42.9102564%2c39.675 42.2439103%2c39 41.4294872%2c39 L41.4294872%2c39 Z' id='Location-white'%3e%3c/path%3e %3c/g%3e %3c/svg%3e"
-                    }
-                  />
-                  <Text color={"teal"} marginLeft="4px" fontWeight={600}>
-                    {" "}
-                    {item.location}
-                  </Text>
-                  <Spacer />
-                  <Box>
-                    <Heading lineHeight="tall" fontSize={"12px"}>
-                      <Highlight
-                        query={["3D-2N","4D-2N"]}
-                        styles={{
-                          px: "2",
-                          py: "1",
-                          rounded: "full",
-                          bg: "teal.100",
-                        }}
-                      >
-                      {item.days}
-                      </Highlight>
-                    </Heading>
-                  </Box>
-                </Flex>
+              
 
                 <Flex>
                   <Text fontSize={"18px"} color="black" fontWeight={600}>
@@ -163,7 +114,7 @@ const Travel = () => {
                     w={"30px"}
                     borderRadius={"50px"}
                     src={
-                      "https://cdn1.tripoto.com/media/filter/mss/img/2165009/UserPhoto/1628574904_tripoto_s_mindful_retreats.jpg"
+                      "https://cdn1.tripoto.com/media/filter/mss/img/1999587/UserPhoto/1594379927_dp2.jpg"
                     }
                   />
                   <p>{item.info}</p>
@@ -183,4 +134,4 @@ const Travel = () => {
   );
 };
 
-export default Travel;
+export default Attend;
