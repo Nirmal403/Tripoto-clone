@@ -11,6 +11,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { places } from '../js/Guides';
 import styles from "../css/guides.module.css";
+import { useNavigate } from 'react-router-dom';
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -72,6 +73,7 @@ const Guides = () => {
       }
     ]
   };
+  const navigate = useNavigate();
   // const dispatch = useDispatch();
   return (
     <div >
@@ -83,7 +85,16 @@ const Guides = () => {
          <div class={styles.App}>
           <Slider {...settings}>
           {places.map((item)=>(
-              <div className={styles.card}>
+              <div className={styles.card} 
+              onClick={() => {
+                     
+                navigate(`/description/${item.id}`);
+                window.location.reload(); 
+              //  handlechange();
+               
+                // return <Link href="/booking/:id"></Link>
+              }}
+              >
               <div className={styles.cardtop}>
                 <img src={item.imgUrl} alt={item.title} />
                

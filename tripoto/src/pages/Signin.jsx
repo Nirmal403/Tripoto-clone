@@ -1,4 +1,4 @@
-import React from "react";
+import React ,{useRef , useEffect} from "react";
 import {
   Image,
   Text,
@@ -20,9 +20,46 @@ import {
 import Lorem from "@chakra-ui/react";
 import { FaFacebook } from "react-icons/fa";
 import { Checkbox, CheckboxGroup } from '@chakra-ui/react';
-import gfont from "../assests/gfont.png"
+import gfont from "../assests/gfont.png";
+import { useDispatch, useSelector } from "react-redux";
+// import { useNavigate } from "react-router-dom";
+
 
 const Signin = () => {
+  // const navigate = useNavigate();
+  // const isAuth = useSelector((value) => value.auth.isAuth);
+  // useEffect(() => {
+  //   if (isAuth) {
+   
+  //     setTimeout(() => {
+ 
+  //       navigate("/")
+  //     }, 2000);
+  //   }
+  //   onOpen();
+  // }, []);
+
+
+  // const dispatch = useDispatch();
+
+  // const handleData = (e) => {
+  //   e.preventDefault();
+
+  //   dispatch(
+  //     saveDetails({
+  //       email: email.current.value,
+  //       password: password.current.value,
+  //     })
+  //   );
+  // };
+  // const email = useRef(null);
+  // const password = useRef(null);
+
+
+
+
+
+
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <div>
@@ -80,10 +117,14 @@ const Signin = () => {
 
 
             <Text as='h5' size='sm'  textAlign="center" color="#9197a3">OR</Text>
-            <Input placeholder="EMAIL" />
+            <Input placeholder="EMAIL"   
+            // ref={email}
+            />
             <br/>
             <br/>
-            <Input placeholder="PASSWORD"/>
+            <Input placeholder="PASSWORD" 
+            //  ref={password}
+             />
            <Flex >
            <Checkbox defaultChecked>Remember me</Checkbox>
            <Spacer/>
@@ -103,6 +144,7 @@ const Signin = () => {
                transform: 'scale(0.98)',
                borderColor: '#f27669',
              }}
+            //  onClick={(e) => handleData(e)}
             >LOG IN</Button>
             <br/>
             <Text as='h5' size='sm'  textAlign="center" color="#9197a3">Don't have an account? 

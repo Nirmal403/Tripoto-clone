@@ -1,4 +1,4 @@
-import React from "react";
+import React ,{useEffect} from "react";
 import {
   Text,
   Flex,
@@ -43,6 +43,15 @@ function SamplePrevArrow(props) {
 }
 
 const Travel = () => {
+
+
+
+  useEffect(() => {
+    window. scrollTo(0, 0)
+    }, [])
+
+
+
   const settings = {
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
@@ -132,7 +141,12 @@ const Travel = () => {
                   <Spacer />
                   <Button
                     onClick={() => {
+                     
                       navigate(`/booking/${item.id}`);
+                      window.location.reload(); 
+                    //  handlechange();
+                     
+                      // return <Link href="/booking/:id"></Link>
                     }}
                     marginTop="10px"
                     marginBottom="10px"

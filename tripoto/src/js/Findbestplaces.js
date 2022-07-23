@@ -3,7 +3,7 @@ export const places=[
         id:1,
         imgUrl:"https://cdn1.tripoto.com/media/filter/tst/img/2215463/Image/1656331106_img_0316.jpg",
         name:"Planning to Explore India Between July and August? Here Are Some of the Cheapest Flights!",
-        info1:"By Sakshi Nahar",
+        info:"By Sakshi Nahar",
     },
     {
         id:2,

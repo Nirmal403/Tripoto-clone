@@ -11,6 +11,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { places } from '../js/Spotlight';
 import styles from "../css/inthespot.module.css";
+import { useNavigate } from 'react-router-dom';
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -36,6 +37,8 @@ function SamplePrevArrow(props) {
 
 
 const Inthespot = () => {
+
+  const navigate = useNavigate();
   const settings = {
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
@@ -84,7 +87,14 @@ const Inthespot = () => {
 
           <Slider {...settings}>
           {places.map((item)=>(
-              <div className={styles.card}>
+              <div className={styles.card}   onClick={() => {
+                     
+                navigate(`/description/${item.id}`);
+                window.location.reload(); 
+              //  handlechange();
+               
+                // return <Link href="/booking/:id"></Link>
+              }}>
               <div className={styles.cardtop}>
                 <img src={item.imgUrl} alt={item.title} />
                 <h1>{item.name}</h1>
