@@ -117,7 +117,7 @@ const Attend = () => {
                       "https://cdn1.tripoto.com/media/filter/mss/img/1999587/UserPhoto/1594379927_dp2.jpg"
                     }
                   />
-                  <p>{item.info}</p>
+                  <p> {item.info}</p>
                   <Image
                     w={"20px"}
                     src={

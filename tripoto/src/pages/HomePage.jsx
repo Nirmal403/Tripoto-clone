@@ -31,6 +31,7 @@ const HomePage = () => {
       <Budget/>
       <Attend/>
       <Footer/>
+   
       </div>
   )
 }
