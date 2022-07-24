@@ -43,6 +43,17 @@ import {
 import { useNavigate } from "react-router-dom";
 
 const Form = (props) => {
+
+function dated(){
+  var dateObj = new Date();
+var month = dateObj.getUTCMonth() + 1; //months from 1-12
+var day = dateObj.getUTCDate()+1;
+var year = dateObj.getUTCFullYear();
+
+var newdate = (day++) +"/" + month + "/"+ year;
+return newdate;
+}
+
   const navigate = useNavigate();
 
   const { isOpen, onOpen, onClose } = useDisclosure()
@@ -84,9 +95,9 @@ const Form = (props) => {
           </NumberInputStepper>
         </NumberInput>
         <Select placeholder="Check In Date" marginTop="10px">
-          <option value="option1">Option 1</option>
-          <option value="option2">Option 2</option>
-          <option value="option3">Option 3</option>
+          <option value="option1">{dated()}</option>
+          <option value="option2">{dated()}</option>
+          <option value="option3">{dated()}</option>
         </Select>
         <Stack marginTop="10px">
           <Radio size="md" name="1" colorScheme="blue">
