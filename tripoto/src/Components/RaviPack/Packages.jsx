@@ -1,17 +1,17 @@
 import { useDispatch } from 'react-redux/es/exports';
-import PackageBottom from "../Components/PackageBottom";
+import PackageBottom from "../Ravi/PackageBottom";
 import { useSelector } from 'react-redux/es/exports';
-import SearchBar from "../Components/SearhBar";
-import { getPackageData } from '../Redux/action';
+import SearchBar from "../Ravi/SearhBar";
 import { useCallback, useState, useEffect } from 'react';
-import CompleteData from '../Components/CompleteData';
-import FetchData from '../Components/FetchData';
+import { getPackageData } from '../Redux/AppRedux/action';
+import CompleteData from '../Ravi/CompleteData';
+import FetchData from '../Ravi/FetchData';
 
 const Packages = () => {
     const [query, setQuery] = useState("");
     const [suggestions, setSuggestions] = useState([]);
     const dispatch = useDispatch();
-    const packageData = useSelector((state) => state.AppReducer.data);
+    const packageData = useSelector((state) => state.AppRedux.data);
 
 
     useEffect(() => {
