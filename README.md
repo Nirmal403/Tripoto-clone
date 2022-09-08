@@ -33,7 +33,7 @@ After signup and login successful user is navigated to the dashboard.
 ## Dashboard:
 On the dashboard, the user can see all the travel destinations .
 
-After proceeding further user is navigated to selected page where he can select his intrest travel destination to get more information of it.
+After proceeding further user is navigated to selected page where he can select his interest travel destination to get more information of it.
 
 ## Visit Dubai :
 On the page, you can see all information related to Dubai to make plan your trip.
@@ -46,6 +46,6 @@ All the images and links are used from the original website to get a better expe
 
 NetlifyLink :
 
-I would say, thank you for reading this here. I hope you will find it helpful. I completed this project with full enthusiasm, focus, and hard work. It may have some bugs, but we will try to fix them soon.
+I would say, thank you for reading this here. I hope you will find it helpful. I completed this project with full enthusiasm, focus, and hard work. It may have some bugs, but I will try to fix them soon.
 
 It was not an easy task to implement the new concepts on the first attempt. Feel free to reach out to us for any feedback.
