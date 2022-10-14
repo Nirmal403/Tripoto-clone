@@ -39,6 +39,9 @@ const PackageDetails = () => {
     const [counter , setCounter] = useState(0);
 
     const handleSubmit = (e) => {
+        alert("Confirm Order")
+        alert("Your booking is done")
+        
         navigate("/");
     }
 
@@ -99,13 +102,18 @@ const PackageDetails = () => {
                         <div className={styles.inputDiv}>
                             <input type="email" 
                             placeholder='Email'
-                            value={email} onChange={handleChange} />
+                            // value={email}
+                             onChange={handleChange} />
                         </div>
                         <div className={styles.inputDiv}>
-                            <input type="text" placeholder='Full Name' value={fullName} name={fullName} onChange={handleChange} />
+                            <input type="text" placeholder='Full Name'
+                            //  value={fullName}
+                              name={fullName} onChange={handleChange} />
                         </div >
                         <div className={styles.inputDiv}>
-                            <input type="number" placeholder='Contact Number' name='number' value={number} />
+                            <input type="number" placeholder='Contact Number' name='number'
+                            //  value={number} 
+                             />
                         </div>
                         <div className={styles.inputDiv} style={{ display:"flex", gap: "60px" }}>
                             <div><h3>Number Of People</h3></div>
@@ -116,7 +124,9 @@ const PackageDetails = () => {
                             </div>
                         </div>
                         <div className={styles.inputDiv}>
-                            <input placeholder='Departure Date' type="date" value={date} name={date} />
+                            <input placeholder='Departure Date' type="date"
+                            //  value={date} 
+                             name={date} />
                         </div>
                         <div className={styles.inputDiv}>
                         <button className={styles.button}  type="submit">Submit Details</button>
