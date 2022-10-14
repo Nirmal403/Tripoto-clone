@@ -7,7 +7,7 @@ Firstly let’s know about Tripto. Tripoto is a travel Booking website, for prov
 
 ## Challenges and hardships we faced:
 
-During the project,
+During the project, faced issue in getting all the datas from the json-server.
 
 ## Tech & Tools Used :
 
